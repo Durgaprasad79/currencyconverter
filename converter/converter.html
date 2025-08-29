@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="main-container">
+                    <h1 class="app-title">Currency Converter</h1>
+                    
+                    <!-- Currency Converter Form -->
+                    <form id="currencyForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="fromCurrency" class="form-label">From Currency</label>
+                                    <select class="form-select" id="fromCurrency" required>
+                                        <option value="">Select Currency</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="toCurrency" class="form-label">To Currency</label>
+                                    <select class="form-select" id="toCurrency" required>
+                                        <option value="">Select Currency</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Swap Button -->
+                        <button type="button" class="swap-btn" id="swapBtn" title="Swap currencies">
+                            ⇄
+                        </button>
+
+                        <div class="form-group">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="amount" placeholder="Enter amount" 
+                                   step="0.01" min="0" required>
+                        </div>
+
+                        <button type="submit" class="btn convert-btn" id="convertBtn">
+                            Convert
+                        </button>
+                    </form>
+
+                    <!-- Results Section -->
+                    <div class="results-section" id="resultsSection">
+                        <div class="results-title">Results</div>
+                        <div id="resultsContent">
+                            <div class="text-center text-muted">
+                                Enter an amount and select currencies to see the conversion
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="converter.js"></script>
+</body>
+</html>
